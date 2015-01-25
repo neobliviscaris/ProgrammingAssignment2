@@ -40,12 +40,12 @@ cacheSolve <- function(x, ...) {
         inverse = x$getinverse()
 
         if (!is.null(inverse)) {
-        	return inverse
+        	return (inverse)
         }
 
         originalMatrix <- x$get()
         inverse <- solve(originalMatrix, ...)
-        x.setinverse(inverse)
+        x$setinverse(inverse)
 
         ## Return a matrix that is the inverse of 'x'
         inverse
